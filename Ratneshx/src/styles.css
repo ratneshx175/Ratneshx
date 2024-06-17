@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --header-bg: #f8f9fa;
+  --text-color: #000000;
+  --bg-color: #fff;
+  --bg2-color: #eef2f5;
+}
+
+.dark-mode {
+  --header-bg: #000000;
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --bg2-color: #1f2022;
+}
+
+section {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

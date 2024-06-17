@@ -1,0 +1,27 @@
+<header>
+  <div class="logo">RATNESHX.</div>
+  <button class="menu-toggle" (click)="menuActive = !menuActive">
+    &#9776;
+  </button>
+  <nav class="List">
+    <ul [class.active]="menuActive">
+      <li>
+        <a href="#home" (click)="scrollToSection($event, 'home')">Home</a>
+      </li>
+      <li>
+        <a href="#projects" (click)="scrollToSection($event, 'projects')"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a href="#blog" (click)="scrollToSection($event, 'blog')">Blog</a>
+      </li>
+      <li>
+        <a href="#buy-coffee" (click)="scrollToSection($event, 'buyCoffee')"
+          >Buy Me a Coffee</a
+        >
+      </li>
+      <li><button (click)="toggleDarkMode()">Toggle Dark Mode</button></li>
+    </ul>
+  </nav>
+</header>
