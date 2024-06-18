@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .about {
   display: flex;
   height: 100vh;
@@ -5,6 +11,7 @@
   animation: fadeIn 2s ease-in-out;
   padding: 0;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -29,7 +36,7 @@ h1 {
 .part1,
 .part2 {
   width: 50%; /* Each part takes 50% of the width */
-  overflow: hidden;
+  width: 50vw;
 }
 
 p {
@@ -50,17 +57,36 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-wrap: break-word;
 }
 
 .wheel {
   position: absolute;
-  left: 50px;
+  left: 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
   transform: rotate(calc(360deg / 4 * var(--i)));
-  transform-origin: 400px;
+  transform-origin: 360px;
   background-color: var(--bg-color);
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 800px) and (max-width: 1450px) {
+  .wheel {
+    transform-origin: 250px;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}
+@media (min-width: 1350px) and (max-width: 1600px) {
+  .wheel {
+    transform-origin: 300px;
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 h3 {
@@ -72,8 +98,8 @@ h3 {
 }
 
 .circle {
-  width: 700px;
-  height: 700px;
+  width: 70vh;
+  height: 70vh;
   border: 3px solid #810ca8;
   border-radius: 50%;
 }
@@ -83,10 +109,10 @@ h3 {
   right: 0px;
   width: 0;
   height: 0;
-  border-top: 462px solid #810ca8;
-  border-right: 462px solid #810ca8;
-  border-bottom: 462px solid #810ca8;
-  border-left: 462px solid transparent;
+  border-top: 50vh solid #810ca8;
+  border-right: 50vh solid #810ca8;
+  border-bottom: 50vh solid #810ca8;
+  border-left: 50vh solid transparent;
 }
 
 @keyframes rotate {
