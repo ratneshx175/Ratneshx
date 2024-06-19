@@ -58,7 +58,6 @@ a:hover {
   font-size: 2rem;
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
 }
 
@@ -72,9 +71,11 @@ a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
+    border-top: 1px solid var(--text-color);
+    border-bottom-left-radius: 10%;
     margin-right: 0px;
     right: -16px;
-    background-color: #333;
+    background-color: #6d6b6b;
     padding: 1rem;
     width: 200px;
   }
@@ -88,8 +89,9 @@ a:hover {
   }
 
   .logo {
+    font-size: 1.5rem;
     position: absolute;
-    left: 10px;
+    left: 15px;
   }
 
   header {

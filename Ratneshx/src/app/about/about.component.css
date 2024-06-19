@@ -11,7 +11,6 @@
   animation: fadeIn 2s ease-in-out;
   padding: 0;
   overflow: hidden;
-  overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -36,7 +35,6 @@ h1 {
 .part1,
 .part2 {
   width: 50%; /* Each part takes 50% of the width */
-  width: 50vw;
 }
 
 p {
@@ -148,4 +146,115 @@ ul {
 a {
   text-decoration: none;
   color: var(--text-color);
+}
+
+/* make responsive to phone */
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    padding: 0;
+  }
+
+  .part1,
+  .part2 {
+    height: 45vh;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .name {
+    font-size: 10px;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: small;
+    margin-left: 50px;
+  }
+
+  .wheel-container {
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    height: 40%;
+    width: 80%;
+    left: 10%;
+    border-radius: 50%;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
+
+  .wheel {
+    position: absolute;
+    left: -0.5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 160px;
+    background-color: var(--bg-color);
+    overflow-wrap: break-word;
+  }
+  .circle {
+    width: 70vw;
+    height: 70vw;
+    border: 3px solid #810ca8;
+    border-radius: 50%;
+  }
+  h3 {
+    font-size: 1rem;
+    line-height: 2;
+    font-weight: 600;
+    color: #810ca8;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .overlay {
+    position: relative;
+    display: flex;
+    width: 0;
+    height: 0;
+    border-top: 45vh solid transparent;
+    border-right: 45vh solid #810ca8;
+    border-bottom: 45vh solid #810ca8;
+    border-left: 45vh solid #810ca8;
+  }
+
+  ul {
+    padding: 0px;
+    display: flex;
+    top: 5vh;
+    left: -30vw;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .part1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-bottom: 20%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: small;
+    max-width: 90vw;
+    text-align: center;
+    margin-left: 0px; /* Optional: Adjust line height for readability */
+  }
 }

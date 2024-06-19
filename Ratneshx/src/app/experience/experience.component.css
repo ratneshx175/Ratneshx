@@ -8,6 +8,7 @@
   background-color: var(--bg2-color);
   text-align: center;
   animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
