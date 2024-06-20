@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   menuActive: boolean = false;
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const clickedInside = target.closest('header');
+    if (!clickedInside && this.menuActive) {
+      this.menuActive = false;
+    }
+  }
 
   scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();

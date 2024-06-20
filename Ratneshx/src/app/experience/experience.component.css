@@ -4,11 +4,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 2rem;
   background-color: var(--bg2-color);
   text-align: center;
   animation: fadeIn 2s ease-in-out;
-  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -20,15 +18,35 @@
   }
 }
 
+.exp {
+  margin-top: 2%;
+  height: 75px;
+  width: 300px;
+  background: var(--bg-color);
+  border: 2px solid #810ca8;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.job h2 {
+  color: #810ca8;
+}
+
+.job h2:hover {
+  color: var(--text-color);
+}
+
 .job {
   width: 80%;
   margin: auto;
+  margin-top: 5%;
   text-align: left;
 }
 
 .client {
-  margin-top: 1rem;
-  background: rgba(255, 255, 255, 0.2);
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-color);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -40,4 +58,53 @@
 .client ul {
   list-style: disc;
   margin-left: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .experience {
+    height: 100%;
+  }
+
+  .exp {
+    height: 50px;
+    width: 150px;
+    margin-top: 2%;
+    background: var(--bg-color);
+    border: 2px solid #810ca8;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    h1 {
+      font-size: medium;
+    }
+  }
+
+  .job h2 {
+    font-size: medium;
+  }
+
+  .job {
+    width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: left;
+    font-size: small;
+  }
+
+  .client {
+    margin-top: 1rem;
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: small;
+  }
+
+  .client h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .client ul {
+    list-style: disc;
+    margin-left: -20px;
+  }
 }
