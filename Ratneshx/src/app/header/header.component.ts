@@ -8,7 +8,17 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  menuActive: boolean = false;
+  menuActive = false;
+  darkMode = false;
+
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+    if (this.darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
@@ -23,9 +33,5 @@ export class HeaderComponent {
     event.preventDefault();
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     this.menuActive = false; // Close the menu after clicking
-  }
-
-  toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
   }
 }

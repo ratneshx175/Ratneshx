@@ -7,7 +7,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
-import { BuyCoffeeComponent } from './buy-coffee/buy-coffee.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactmeComponent } from './contactme/contactme.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { BuyCoffeeComponent } from './buy-coffee/buy-coffee.component';
     EducationComponent,
     ProjectsComponent,
     BlogComponent,
-    BuyCoffeeComponent,
+    FooterComponent,
+    ContactmeComponent,
     RouterOutlet,
     RouterLinkActive,
   ],

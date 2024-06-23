@@ -4,7 +4,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
-import { BuyCoffeeComponent } from './buy-coffee/buy-coffee.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactmeComponent } from './contactme/contactme.component';
 
 export const routes: Routes = [
   { path: '', component: AboutComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'education', component: EducationComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'buy-coffee', component: BuyCoffeeComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'contactme', component: ContactmeComponent },
 ];

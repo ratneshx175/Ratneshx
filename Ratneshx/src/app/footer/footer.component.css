@@ -1,0 +1,46 @@
+.footer {
+  margin: 0;
+  padding: 20px 0;
+  background-color: var(--bg2-color);
+  animation: fadeIn 2s ease-in-out;
+  border-top: 1px solid var(--text-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #810ca8;
+}
+
+@media (max-width: 600px) {
+  .contact-btn {
+    padding: 8px;
+    font-size: 10px;
+  }
+}

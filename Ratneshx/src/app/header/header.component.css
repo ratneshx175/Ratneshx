@@ -36,6 +36,11 @@ li {
   display: inline;
 }
 
+.List {
+  display: flex;
+  right: 3%;
+}
+
 a,
 button {
   color: var(--text-color);
@@ -53,6 +58,12 @@ a:hover {
   color: #810ca8;
 }
 
+.toggle-mode {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1%;
+}
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -65,6 +76,21 @@ a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    margin-top: -2%;
+  }
+
+  .List {
+    right: 0%;
+  }
+
+  .nav {
+    display: inline;
+  }
+  .toggle-mode {
+    position: absolute;
+    right: 60px;
+    padding-top: 2%;
+    font-size: 1.5rem;
   }
 
   ul {
@@ -77,15 +103,16 @@ a:hover {
     right: -16px;
     background-color: #6d6b6b;
     padding: 1rem;
-    width: 200px;
+    width: 150px;
+  }
+
+  ul li {
+    border-bottom: 1px solid #810ca8;
+    padding: 5px 10px;
   }
 
   ul.active {
     display: flex;
-  }
-
-  li {
-    margin: 0.5rem 0;
   }
 
   .logo {
